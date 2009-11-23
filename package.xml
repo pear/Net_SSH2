@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.7.2" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+ <name>Net_SSH2</name>
+ <channel>pear.php.net</channel>
+ <summary>ssh2 client abstraction layer</summary>
+ <description>Net_SSH2 provide access to resources (remote exec, file transfer) on a remote machine using a secure cryptographic transport. 
+
+Currently the following drivers are available:
+- PECL/ssh2 extesion
+- OpenSSH wrapper</description>
+ <lead>
+  <name>Luca Corbo</name>
+  <user>lucor</user>
+  <email>lucor@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2009-09-14</date>
+ <time>15:38:38</time>
+ <version>
+  <release>0.1.4</release>
+  <api>0.1.2</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+ <notes>- Moved constants into the Net_SSH2 class.
+- Fixed visibility (public, static, etc.) keyword on such methods
+- Added autoload
+- Added @throws doc comment.
+- Now the correct name of the module php_ssh2.dll/ssh2.so is displayed on error
+- Used $this-&gt;markTestSkipped() in tests instead of die().
+- Added optional dependency to package.xml</notes>
+ <contents>
+  <dir baseinstalldir="." name="/">
+   <file baseinstalldir="." md5sum="666b1e33c106547b08f4ee6a38f2a467" name="Net/SSH2.php" role="php" />
+   <file baseinstalldir="." md5sum="9eb317afca8faafc4ebca3e56e7ab19f" name="Net/SSH2/Exception.php" role="php" />
+   <file baseinstalldir="." md5sum="365e5c1428fb1292c9d14076f317a4f3" name="Net/SSH2/LibSSH2.php" role="php" />
+   <file baseinstalldir="." md5sum="955a4a143e271789101915baf3ff5b63" name="Net/SSH2/OpenSSH.php" role="php" />
+   <file baseinstalldir="." md5sum="dcbf9aad888d4fac4c81f363b2b043a8" name="tests/AllTests.php" role="test" />
+   <file baseinstalldir="." md5sum="2f405e52bc3ed4b399c6613662e7ef34" name="tests/config.dist.php" role="test" />
+   <file baseinstalldir="." md5sum="b4e84b463aad52a9a47c26d78d40b75a" name="tests/LibSSH2Test.php" role="test" />
+   <file baseinstalldir="." md5sum="1657c56344ad61bf4fc156b3ff1e4132" name="tests/OpenSSHTest.php" role="test" />
+   <file baseinstalldir="." md5sum="d41d8cd98f00b204e9800998ecf8427e" name="tests/scp_test.txt" role="test" />
+   <file baseinstalldir="." md5sum="d41d8cd98f00b204e9800998ecf8427e" name="tests/send_file.txt" role="test" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5</min>
+   </php>
+   <pearinstaller>
+    <min>1.5.4</min>
+   </pearinstaller>
+  </required>
+  <optional>
+   <package>
+    <name>File</name>
+    <channel>pear.php.net</channel>
+   </package>
+   <package>
+    <name>System</name>
+    <channel>pear.php.net</channel>
+   </package>
+   <extension>
+    <name>ssh2</name>
+   </extension>
+  </optional>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>0.1.0</release>
+    <api>0.1.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2009-01-27</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>Initial release</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.1.1</release>
+    <api>0.1.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2009-01-30</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>- code cleanup doconnor</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.1.2</release>
+    <api>0.1.2</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2009-03-27</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>- Changed package name
+- Implemented OpenSSH and LibSSH2 drivers
+- Added unit tests</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.1.3</release>
+    <api>0.1.2</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2009-09-08</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>- &quot;proc_open(): pty pseudo terminal not supported on this system.&quot; exception is now handled.
+- Improved unit tests
+- Modified package structure</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.1.4</release>
+    <api>0.1.2</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2009-09-14</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>- Moved constants into the Net_SSH2 class.
+- Fixed visibility (public, static, etc.) keyword on such methods
+- Added autoload
+- Added @throws doc comment.
+- Now the correct name of the module php_ssh2.dll/ssh2.so is displayed on error
+- Used $this-&gt;markTestSkipped() in tests instead of die().
+- Added optional dependency to package.xml</notes>
+  </release>
+ </changelog>
+</package>
