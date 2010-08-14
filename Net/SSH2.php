@@ -87,7 +87,7 @@ abstract class Net_SSH2
      * @throws Net_SSH2_Exception If trying to get an undefined properties.
      * @return mixed The value of the object on success
      */
-    protected function __get($key)
+    public function __get($key)
     {
         if (!key_exists($key, $this->allowed_options)) {
             throw new Net_SSH2_Exception(
@@ -112,7 +112,7 @@ abstract class Net_SSH2
      * @throws Net_SSH2_Exception If trying to set an undefined properties.
      * @return mixed True on success
      */
-    protected function __set($key, $value)
+    public function __set($key, $value)
     {        
         if (!key_exists($key, $this->allowed_options)) {
             throw new Net_SSH2_Exception(
