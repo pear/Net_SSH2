@@ -8,7 +8,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "Net_SSH2": "./"
+            "Net": "./"
         }
     },
     "description": "More info available on: http://pear.php.net/package/Net_SSH2",
@@ -27,5 +27,8 @@
     },
     "require-dev": {
         "phpunit/phpunit": "*"
+    },
+    "suggest": {
+        "pear/file": "Install optionally via your project's composer.json"
     }
 }
