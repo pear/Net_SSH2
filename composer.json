@@ -1,0 +1,34 @@
+{
+    "authors": [
+        {
+            "email": "lucor@php.net",
+            "name": "Luca Corbo",
+            "role": "Lead"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Net": "./"
+        }
+    },
+    "description": "More info available on: http://pear.php.net/package/Net_SSH2",
+    "include-path": [
+        "./"
+    ],
+    "license": "LGPL",
+    "name": "pear/net_ssh2",
+    "support": {
+        "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Net_SSH2",
+        "source": "https://github.com/pear/Net_SSH2"
+    },
+    "type": "library",
+    "require": {
+        "pear/pear_exception": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "suggest": {
+        "pear/file": "Install optionally via your project's composer.json"
+    }
+}
